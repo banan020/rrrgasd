@@ -1,0 +1,129 @@
+<html>
+    <head>
+    <title>Hiver RP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="js/text.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+                <header id="header">
+                    <h1>Hiver RP</h1>
+                    <p>파이브엠에서 &nbsp;&bull;&nbsp; 최고인 &nbsp;&bull;&nbsp; Hiver RP에 오신것을 진심으로 환영합니다.</p>
+                    <nav>
+                        <ul>
+                            <li><a href="https://discord.gg/n7nmq9yB5s" class="icon brands fa-discord" target="_blank" onclick="window.invokeNative('openUrl', 'https://n7nmq9yB5s');"><span class="label">Discord</span></a></li>
+                            <li><a href="https://youtube.com/@hiverserverp" class="icon brands fa-youtube" target="_blank" onclick="window.invokeNative('openUrl', 'https://youtube.com');"><span class="label">YouTube</span></a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+		</div>
+        <img src="img/cursor.png" alt="cursor" id="cursor">
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+                <img src="img/music.png" width="150px" height="60px">
+                <span></span>
+            </label>
+
+        <ul class="menu__box">
+
+            <div id="app-cover">
+                <div id="player">
+                    <div id="player-track">
+                        <div id="album-name"></div>
+                        <div id="track-name"></div>
+                        <div id="track-time">
+                            <div id="current-time"></div>
+                            <div id="track-length"></div>
+                        </div>
+                        <div id="s-area">
+                            <div id="ins-time"></div>
+                            <div id="s-hover"></div>
+                            <div id="seek-bar"></div>
+                        </div>
+                    </div>
+                    <div id="player-content">
+                        <div id="album-art">
+                            <img src="https://cdn.discordapp.com/attachments/1072657738968088607/1072824490595205150/Comp_1_2_1.gif" class="active" id="_1">
+                            <img src="https://cdn.discordapp.com/attachments/1072657738968088607/1072824490595205150/Comp_1_2_1.gif" id="_2">
+                            <img src="https://cdn.discordapp.com/attachments/1072657738968088607/1072824490595205150/Comp_1_2_1.gif" id="_3">
+                            <img src="https://cdn.discordapp.com/attachments/1072657738968088607/1072824490595205150/Comp_1_2_1.gif" id="_4">
+                            <div id="buffer-box">로딩 중 ...</div>
+                        </div>
+                        <div id="player-controls">
+                            <div class="control">
+                                <div class="button" id="play-previous">
+                                    <i class="fas fa-backward"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-pause-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-next">
+                                    <i class="fas fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ul>
+    </div>
+    <footer id="footer">
+        <span class="copyright">&copy; Hiver RP 오늘도 화이팅!!</span>
+    </footer>
+    <script>
+        window.onload = function() { document.body.classList.remove('is-preload'); }
+        window.ontouchmove = function() { return false; }
+        window.onorientationchange = function() { document.body.scrollTop = 0; }
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        function ffalse() {
+            return false;
+        }
+
+        function ftrue() {
+            return true;
+        }
+
+        document.onselectstart = new Function("return false");
+        if (window.sidebar) {
+            document.onmousedown = ffalse;
+            document.onclick = ftrue;
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).mousemove(function(e) {
+            $("#cursor").css({
+                left: e.pageX,
+                top: e.pageY
+            });
+        })
+    </script>
+</body>
+
+</html>
